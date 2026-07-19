@@ -1,0 +1,17 @@
+# Terraform working directory
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+*.backup
+
+# Terraform lock file (optional)
+.terraform.lock.hcl
+
+# Terraform variable files
+terraform.tfvars
+*.auto.tfvars
+
+# Private keys
+*.pem
