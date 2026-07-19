@@ -83,3 +83,12 @@ jobs:
       - name: Terraform Destroy
         if: ${{ github.event.inputs.action == 'destroy' }}
         run: terraform destroy -auto-approve
+
+      - name: Upload PEM File
+        if: ${{ github.event.inputs.action == 'apply' }}
+        uses: actions/upload-artifact@v4
+        with:
+            name: learn-terraform-key
+            path: learn-terraform-key.pem
+            if-no-files-found: error
+        
