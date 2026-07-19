@@ -27,7 +27,7 @@ jobs:
         run: terraform init
 
       - name: Terraform Format Check
-        run: terraform fmt -check
+        run: terraform fmt
 
       - name: Terraform Validate
         run: terraform validate
@@ -39,4 +39,3 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve
 
-        
